@@ -1,0 +1,22 @@
+.main-container{
+    position: relative;
+    margin: 0 auto;
+    background-color: #cef565;
+    border: 3px solid #cef565;
+    border-radius: 20px;
+    padding: clamp(.5rem, 3vw, 2rem);
+    min-height: 100vh; 
+    overflow: hidden;
+}
+
+.header-main{
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 110%;
+    height: 180px;
+    background-color: #320070;
+    border-bottom: 5px solid #cef565; 
+    overflow: hidden;
+    z-index: 10; 
+}

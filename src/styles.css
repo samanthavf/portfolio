@@ -1,0 +1,11 @@
+body{
+    background-color: #320070;
+    color: #cef565;
+    font-family:  system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
