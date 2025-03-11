@@ -1,22 +1,51 @@
 .main-container{
-    position: relative;
     margin: 0 auto;
     background-color: #cef565;
-    border: 3px solid #cef565;
+    border: 2px solid #cef565;
     border-radius: 20px;
     padding: clamp(.5rem, 3vw, 2rem);
     min-height: 100vh; 
+    height: auto;
     overflow: hidden;
 }
 
 .header-main{
-    position: absolute;
-    top: -25px;
-    left: 0;
+    position: relative;
+    top: -40px;
+    left: -40px;
     width: 110%;
-    height: 180px;
+    height: 550px;
     background-color: #320070;
-    border-bottom: 5px solid #cef565; 
+    border-bottom: 1px dashed  #cef565; 
     overflow: hidden;
     z-index: 10; 
+}
+
+.content{
+    position: relative;
+    top: -40px;
+    left: -40px;
+    width: 110%;
+    height: 650px;
+    background-color: #320070;
+    border-bottom: 1px dashed #cef565;
+    overflow: hidden;
+    z-index: 9;
+}
+
+.content ul{
+    position: absolute;
+    right: 30%;
+    top: 40%;
+}
+
+footer{
+    position: relative;
+    top: -40px;
+    left: -40px;
+    width: 110%;
+    height: 350px;
+    background-color: #320070;
+    overflow: hidden;
+    z-index: 8;
 }
