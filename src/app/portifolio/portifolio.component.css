@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 .main-container{
+    position: relative;
+    top: 30px;
     margin: 0 auto;
-    background-color: #cef565;
-    border: 2px solid #cef565;
-    border-radius: 20px;
+    width: 87%;
+    border: 2px solid #00ff00;
+    box-shadow: 0px 0px 20px 5px #00ff00; 
+    border-radius: 10px;
     padding: clamp(.5rem, 3vw, 2rem);
-    min-height: 100vh; 
-    height: auto;
+    height: 270vh;
     overflow: hidden;
 }
 
@@ -13,10 +16,11 @@
     position: relative;
     top: -40px;
     left: -40px;
-    width: 110%;
-    height: 550px;
-    background-color: #320070;
-    border-bottom: 1px dashed  #cef565; 
+    width: 120%;
+    height: 1020px;
+    background-color: rgba(17, 17, 17, 0.7);;
+    border-bottom: 1px dashed  #00ff00; 
+    box-shadow: 0px 0px 8px 2px #00ff00; 
     overflow: hidden;
     z-index: 10; 
 }
@@ -25,10 +29,11 @@
     position: relative;
     top: -40px;
     left: -40px;
-    width: 110%;
-    height: 650px;
-    background-color: #320070;
-    border-bottom: 1px dashed #cef565;
+    width: 120%;
+    height: 980px;
+    background-color: rgba(17, 17, 17, 0.7);;
+    border-bottom: 1px dashed #00ff00;
+    box-shadow: 0px 0px 8px 2px #00ff00; 
     overflow: hidden;
     z-index: 9;
 }
@@ -43,9 +48,17 @@ footer{
     position: relative;
     top: -40px;
     left: -40px;
-    width: 110%;
-    height: 350px;
-    background-color: #320070;
+    width: 120%;
+    height: 250px;
+    background-color: rgba(17, 17, 17, 0.7);;
     overflow: hidden;
     z-index: 8;
+}
+
+#logo{
+position: relative;
+    top: 30px;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #002200, 4px 4px #001100;
 }

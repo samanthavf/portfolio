@@ -1,7 +1,8 @@
 body{
-    background-color: #320070;
-    color: #cef565;
-    font-family:  system-ui, 'Segoe UI', Roboto, sans-serif;
+    background-color:  #0f052d;
+    color: #00ff00;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
 }
 
 *,
@@ -9,3 +10,28 @@ body{
 *::after {
     box-sizing: border-box;
 }
+
+/* Criando o fundo de estrelas */
+.stars {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: 
+      radial-gradient(white 1px, transparent 2px),
+      radial-gradient(white 1px, transparent 2px);
+    background-size: 800px 800px; /* Define o tamanho das estrelas */
+    background-position: 0 0, 400px 400px;
+    animation: moveStars 10s linear infinite;
+  }
+  
+  /* Animação para movimentar as estrelas */
+  @keyframes moveStars {
+    from {
+      background-position: 0 0, 400px 400px;
+    }
+    to {
+      background-position: 0 800px, 400px 1200px;
+    }
+  }
