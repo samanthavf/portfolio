@@ -4,8 +4,8 @@
     top: 30px;
     margin: 0 auto;
     width: 87%;
-    border: 2px solid #00ff00;
-    box-shadow: 0px 0px 20px 5px #00ff00; 
+    border: 2px solid #0074a2;
+    box-shadow: 0px 0px 20px 5px #0074a2; 
     border-radius: 10px;
     padding: clamp(.5rem, 3vw, 2rem);
     height: 270vh;
@@ -18,9 +18,9 @@
     left: -40px;
     width: 120%;
     height: 1020px;
-    background-color: rgba(17, 17, 17, 0.7);;
-    border-bottom: 1px dashed  #00ff00; 
-    box-shadow: 0px 0px 8px 2px #00ff00; 
+    background-color: rgba(17, 17, 17, 0.7);
+    border-bottom: 1px dashed  #0074a2; 
+    box-shadow: 0px 0px 8px 2px #0074a2; 
     overflow: hidden;
     z-index: 10; 
 }
@@ -32,8 +32,8 @@
     width: 120%;
     height: 980px;
     background-color: rgba(17, 17, 17, 0.7);
-    border-bottom: 1px dashed #00ff00;
-    box-shadow: 0px 0px 8px 2px #00ff00; 
+    border-bottom: 1px dashed #0074a2;
+    box-shadow: 0px 0px 8px 2px #0074a2; 
     overflow: hidden;
     z-index: 9;
 }
@@ -56,14 +56,21 @@ footer{
 }
 
 #logo{
-position: absolute;
-    top: 30px;
+    position: absolute;
+    top: 45px;
     left: 50%;
-    transform: translate(-65%, -20%);
+    transform: translate(-65%, -20%) skewX(-15deg);
     color: #ffcc00;
-    font-size: 40px;
+    font-size: 45px;
     text-transform: uppercase;
     text-shadow: 3px 3px #ff0000,  
     2px 2px #ff6600,  
     1px 1px #cc9900;
+}
+
+#me{
+    position: absolute;
+    width: 450px;
+    top: 30%;
+    right: 73%;
 }
