@@ -21,7 +21,6 @@
     background-color: rgba(17, 17, 17, 0.7);
     border-bottom: 1px dashed  #0074a2; 
     box-shadow: 0px 0px 8px 2px #0074a2; 
-    overflow: hidden;
     z-index: 10; 
 }
 
@@ -30,11 +29,11 @@
     top: -40px;
     left: -40px;
     width: 120%;
-    height: 980px;
+    height: 1090px;
     background-color: rgba(17, 17, 17, 0.7);
     border-bottom: 1px dashed #0074a2;
-    box-shadow: 0px 0px 8px 2px #0074a2; 
-    overflow: hidden;
+    box-shadow: 0px 0px 8px 2px #0074a2;
+    overflow: hidden; 
     z-index: 9;
 }
 
@@ -46,13 +45,16 @@
 
 footer{
     position: relative;
-    top: -40px;
+    top: -65px;
     left: -40px;
     width: 120%;
-    height: 250px;
+    height: 150px;
     background-color: rgba(17, 17, 17, 0.7);
     overflow: hidden;
     z-index: 8;
+     display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
 }
 
 #division{
@@ -84,43 +86,94 @@ footer{
     right: 73%;
 }
 
-.speech-bubble {
+.presentation-txt{
     position: absolute;
-    top: 20%;
-    left: 30%;
-    color: #ffffff; 
-    padding: 15px 25px;
-    border-radius: 60px;
-    border: 2px solid #ffffff;
-    font-size: 14px;
+    font-size: 13px;
+    top: 25%;
+    left: 35%;
+    flex-direction: column; 
+    align-items: center; 
+    max-width: 765px;
+    text-align: left;
+}
+p {
+    margin: 10px 0;
+}
+
+.skills{
+    position: absolute;
+    top: 40%;
+    left: 33%;
+    border-radius: 8px;
+    border: 1px dashed #e82ea1;
+    box-shadow: 0px 0px 8px 5px #f6a6e7; 
+    height: 70vh;
     width: 50%;
-    height: 77%;
-    text-align: center;
-    box-shadow: 4px 4px 0px #222; 
-  }
-  
-  
-  .speech-bubble::after {
-    content: "";
+}
+
+.habilidades{
     position: absolute;
-    top: 20%;
-    left: -20px; 
-    transform: translateY(-50%);
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent #fffefe transparent transparent;  
-}
-  
-.line {
-    display: block; 
-  }
+    width: 100%;
+    height: 7vh;
+    border: 1px dashed #e82ea1;
+    box-shadow: 0px 0px 5px 5px #f6a6e7; 
 
-  a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Herda a cor do elemento pai */
 }
 
-  a i {
-    text-decoration: none; /* Remove o sublinhado do i */
-    color: inherit; /* Faz o i herdar a cor do texto do link */
+.back-skills, .front-skills{
+    position: absolute;
+    top: 57px;
+    height: 63vh;
+    width: 50%;
+    border-right: 1px dashed #e82ea1;
+    box-shadow:  -5px 0px 10px rgba(246, 166, 231, 0.6), 5px 0px 10px rgba(246, 166, 231, 0.6); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.back-skills {
+    left: 0; 
+}
+
+.front-skills{
+    left: 50%;
+}
+
+
+  nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-2 {
+    justify-content: flex-start;
+}
+
+.nav-2 a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 220px;
+}
+
+nav a {
+    margin-right: 25px;
+}
+
+nav a i {
+    display: inline-block;
+}
+
+nav a img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.back-skills:hover, .front-skills:hover, nav a:hover img {
+    transform: scale(1.2); 
+    transition: transform 0.3s ease;
+}
+
+footer nav {
+    justify-content: flex-end;
 }
