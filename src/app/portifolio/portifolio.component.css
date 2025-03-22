@@ -38,11 +38,13 @@
     z-index: 9;
 }
 
-.content ul{
+.content canvas {
     position: absolute;
-    right: 30%;
-    top: 40%;
+    top: 24%;
+    left: 6%;
+    display: block; /* Remove espaçamentos indesejados */
 }
+
 
 footer{
     position: relative;
