@@ -40,7 +40,7 @@
 
 .content canvas {
     position: absolute;
-    top: 24%;
+    top: 17%;
     left: 6%;
     display: block; /* Remove espaçamentos indesejados */
 }

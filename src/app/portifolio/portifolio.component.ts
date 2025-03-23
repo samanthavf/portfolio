@@ -12,9 +12,11 @@ export class PortifolioComponent implements AfterViewInit {
   private canvas!: HTMLCanvasElement;
   private ctx!: CanvasRenderingContext2D;
 
+
     constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   private walls =[
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
     [1,1,1,0,1,1,1,0,1,1,1,1,0,1,1,1],
     [1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1],
     [1,0,1,1,1,1,0,1,1,1,1,1,0,1,0,1],
@@ -27,6 +29,8 @@ export class PortifolioComponent implements AfterViewInit {
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
   ];
 
+  private character = {img: null as HTMLImageElement | null, x:0,y:0,size:50};
+
   ngAfterViewInit(){
     if (isPlatformBrowser(this.platformId)) {
       this.canvas = document.querySelector('canvas')!;
@@ -37,7 +41,52 @@ export class PortifolioComponent implements AfterViewInit {
       this.canvas.width = container.offsetWidth;
       this.canvas.height = container.offsetHeight;
 
-      this.drawWalls();
+      this.character.img = new Image();
+      this.character.img.src = 'char.gif';
+      this.character.img.onload = () => {
+      console.log('Imagem carregada');
+      this.draw();
+      };
+
+      this.canvas.addEventListener('click', (event) => this.handleMouseMove(event));
+    }
+  }
+
+  draw() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.drawWalls();
+    this.drawCharacter();
+  }
+
+
+  handleMouseMove(event: MouseEvent) {
+    const rect = this.canvas.getBoundingClientRect();
+  
+    const clickX = event.clientX - rect.left;
+    const clickY = event.clientY - rect.top;
+  
+    const cellSize = 80;
+    const cellX = Math.floor(clickX / cellSize);
+    const cellY = Math.floor(clickY / cellSize);
+  
+    if (this.walls[cellY] && this.walls[cellY][cellX] === 0) {
+      this.character.x = cellX;
+      this.character.y = cellY;
+      this.draw();
+    }
+
+  }
+
+  drawCharacter() {
+    if (this.character.img && this.character.img.complete) {
+      const cellSize = 80;
+      this.ctx.drawImage(
+        this.character.img,
+        this.character.x*cellSize,
+        this.character.y*cellSize,
+        cellSize,
+        cellSize
+      ); 
     }
   }
 
