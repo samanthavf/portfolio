@@ -57,7 +57,23 @@
 </header>
 
 <main class="content">
+    <ol class="instructions">
+        <li>Clique em um espaço vazia para mover o coelho.</li>
+        <li>Ao coletar uma cenoura, exibirá um projeto.</li>
+        <li>Colete todas as cenouras para completar o placar e vencer o jogo!</li>
+    </ol>
     <canvas #gameCanvas></canvas>
+  
+    <div *ngIf="modalAberto" class="modal">
+        <div class="modal-content">
+          <span class="close" (click)="fecharModal()">&times;</span>
+          <h2>{{ projetoAtual.titulo }}</h2>
+          <p>{{ projetoAtual.descricao }}</p>
+          <img [src]="projetoAtual.imagem" alt="{{ projetoAtual.titulo }}" />
+        </div>
+      </div>
+      
+  
 </main>
 
 <footer>
