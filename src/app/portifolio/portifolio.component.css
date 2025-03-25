@@ -38,22 +38,27 @@
     z-index: 9;
 }
 
+.content-title{
+    position: absolute;
+    top: 35px;
+    left: 25%;
+}
+
 .content canvas {
     position: absolute;
-    top: 23%;
+    top: 21%;
     left: 6%;
-    display: block; /* Remove espaçamentos indesejados */
+    display: block; 
 }
 
 .instructions{
     position: absolute;
-    width: 365px;
-    left: 13px;
+    left: 15%;
     text-align: left; 
     flex-direction: column; 
-    line-height: 1.6;
-    font-size: 13px;
-    top: 8%;
+    line-height: 1.8;
+    font-size: 16px;
+    top: 10%;
 }
 
 footer{
