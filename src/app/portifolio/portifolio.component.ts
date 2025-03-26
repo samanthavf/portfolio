@@ -37,7 +37,7 @@ fecharModal() {
 }
 
   private walls =[
-    [0,0,0,0,0,3,3,3,3,3,3,3,3,3,3,3],
+    [0,0,0,0,0,0,0,0,0,3,3,3,3,3,3,3],
     [1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1],
     [1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1],
     [1,0,1,0,0,0,0,1,0,0,2,1,0,1,0,1],
@@ -55,7 +55,22 @@ fecharModal() {
   ];
 
   private character = {img: null as HTMLImageElement | null, x:1,y:0,size:50};
-  private card = {img: null as HTMLImageElement | null}
+  private carrot = {img: null as HTMLImageElement | null}
+  private score = 0;
+
+  updateScore(){
+    let count = 0;
+    for(let row =0; row < this.walls.length; row ++){
+      for(let col=0;col < this.walls[row].length; col++){
+        if (this.walls[row][col] === 3 && count < this.score) {
+          this.walls[row][col]= 4;
+          count++;
+          this.score--;
+        }
+      }
+    }
+    console.log('Score atualizado:', this.score);
+  }
 
   ngAfterViewInit(){
     if (isPlatformBrowser(this.platformId)) {
@@ -74,9 +89,9 @@ fecharModal() {
       this.draw();
       };
 
-      this.card.img = new Image();
-      this.card.img.src = 'cenoura.png'
-      this.card.img.onload = () => {
+      this.carrot.img = new Image();
+      this.carrot.img.src = 'cenoura.png'
+      this.carrot.img.onload = () => {
         console.log('Card Imagem carregada!');
         this.draw();
       }
@@ -106,12 +121,16 @@ fecharModal() {
       this.character.x = cellX;
       this.character.y = cellY;
       this.draw();
+      this.checkCollision(this.character.x * cellSize, this.character.y * cellSize);
   }else if (this.walls[cellY] && this.walls[cellY][cellX] === 2) {
     console.log('Visualizou um projeto!');
     this.walls[cellY][cellX] = 0
 
     const projetoIndex = Math.floor(Math.random() * this.projetos.length);
     this.abrirModal(projetoIndex);
+
+    this.score++;
+    this.updateScore();
 
     this.draw()
   }
@@ -138,14 +157,25 @@ fecharModal() {
         if(this.walls[row][col] === 1 ){
           this.ctx.fillStyle = 'white';
           this.ctx.fillRect(col*cellSize,row *cellSize,cellSize,cellSize);
-        }else if (this.walls[row][col] === 2 && this.card.img) {
+        }else if (this.walls[row][col] === 2 && this.carrot.img) {
           this.ctx.drawImage(
-            this.card.img,
-            col * cellSize + (cellSize / 4),  // Ajuste para centralizar
+            this.carrot.img,
+            col * cellSize + (cellSize / 4),  
             row * cellSize + (cellSize / 4),
-            cellSize / 2, // Reduz o tamanho do card para melhor visualização
+            cellSize / 2, 
             cellSize / 2
           );
+        }else if (this.walls[row][col] === 3) {
+          this.ctx.fillStyle= 'rgba(17, 17, 17, 0.7)';
+          this.ctx.fillRect(col*cellSize, row*cellSize, cellSize, cellSize);
+        }else if (this.walls[row][col] === 4 && this.carrot.img) {
+            this.ctx.drawImage(
+            this.carrot.img,
+            col * cellSize + (cellSize / 4),
+            row * cellSize + (cellSize / 4),
+            cellSize /2,
+            cellSize /2
+            );
         }
       }
     }
