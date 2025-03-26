@@ -1,96 +1,109 @@
-<div class="main-container"> 
+<div class="main-container">
 
-<header class="header-main">
+    <header class="header-main">
 
-<nav class="main-nav"></nav>
+        <nav class="main-nav"></nav>
 
-<div class="marquee-container">
-    <div class="marquee-content">
-        <img src="heart.png" alt="heart" class="heart"> Bem-vindo ao meu site! <img src="heart.png" alt="heart" class="heart"> | Desenvolvedora Fullstack | Criando experiências incríveis! | 
-        <img src="heart.png" alt="heart" class="heart"> Bem-vindo ao meu site! <img src="heart.png" alt="heart" class="heart"> | Desenvolvedora Fullstack | Criando experiências incríveis! |  
-    </div>
-</div>
-
-<div id="division"></div>
-<img src="e-animation.gif" id="me" alt="pixel-gif">
-<div class="presentation-txt">
-    <h3>Olá, eu sou a Samantha!</h3>
-    <p>
-        Sou programadora fullstack, apaixonada por transformar ideias em código. No back-end,
-        utilizo Java (Spring Boot), e no front-end, trabalho com Angular. 
-        Tenho experiência com WordPress, criando e personalizando temas e plugins, além de trabalhar 
-        com PostgreSQL e MySQL para gerenciamento de dados. Utilizo também Docker para facilitar a implantação e escalabilidade,
-        e Git para controle de versão e colaboração em equipe. Quando não estou codificando, gosto de ler, explorar o mundo das artes e,
-        claro, saborear um bom café. Vamos tirar projetos do papel e construir algo incrível!☕✨</p>
-</div>
-<div class="skills">
-    <div class="skills-container">
-        <div class="habilidades"><h3>Habilidades</h3></div>
-
-        <div class="back-skills">
-            <h4>Back-End</h4>
-            <ul class="back-techs">
-                <li>Java</li>
-                <li>Spring Boot</li>
-                <li>Spring Security</li>
-                <li>Spring JPA</li>
-                <li>PostgreSQL</li>
-                <li>Flyway</li>
-                <li>JWT</li>
-            </ul>
-        </div>
-        <div class="front-skills">
-            <h4>Front-End</h4>
-            <ul class="front-techs">
-                <li>Angular</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>HTML5&CSS3</li>
-                <li>Bootstrap</li>
-                <li>WordPress</li>
-                <li>Figma</li>
-            </ul>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <img src="heart.png" alt="heart" class="heart"> Bem-vindo ao meu
+                site! <img src="heart.png" alt="heart" class="heart"> |
+                Desenvolvedora Fullstack | Criando experiências incríveis! |
+                <img src="heart.png" alt="heart" class="heart"> Bem-vindo ao meu
+                site! <img src="heart.png" alt="heart" class="heart"> |
+                Desenvolvedora Fullstack | Criando experiências incríveis! |
+            </div>
         </div>
 
-    </div>
-</div>
-</header>
-
-<main class="content">
-    <h1 class="content-title">Projetos Anteriores</h1>
-    <ol class="instructions">
-        <li>Clique em um espaço vazia para mover o coelho.</li>
-        <li>Ao coletar uma cenoura, exibirá um projeto.</li>
-        <li>Colete todas as cenouras para completar o placar e vencer o jogo!</li>
-    </ol>
-    <canvas #gameCanvas></canvas>
-  
-    <div *ngIf="modalAberto" class="modal">
-        <div class="modal-content">
-          <span class="close" (click)="fecharModal()">&times;</span>
-          <h2>{{ projetoAtual.titulo }}</h2>
-          <p>{{ projetoAtual.descricao }}</p>
-          <img [src]="projetoAtual.imagem" alt="{{ projetoAtual.titulo }}" />
+        <div id="division"></div>
+        <img src="e-animation.gif" id="me" alt="pixel-gif">
+        <div class="presentation-txt">
+            <h3>Olá, eu sou a Samantha!</h3>
+            <p>
+                Sou programadora fullstack, apaixonada por transformar ideias em
+                código. No back-end,
+                utilizo Java (Spring Boot), e no front-end, trabalho com
+                Angular.
+                Tenho experiência com WordPress, criando e personalizando temas
+                e plugins, além de trabalhar
+                com PostgreSQL e MySQL para gerenciamento de dados. Utilizo
+                também Docker para facilitar a implantação e escalabilidade,
+                e Git para controle de versão e colaboração em equipe. Quando
+                não estou codificando, gosto de ler, explorar o mundo das artes
+                e,
+                claro, saborear um bom café. Vamos tirar projetos do papel e
+                construir algo incrível!☕✨</p>
         </div>
-      </div>
-      
-  
-</main>
+        <div class="skills">
+            <div class="skills-container">
+                <div class="habilidades"><h3>Habilidades</h3></div>
 
-<footer>
-    <nav>
-        <a href="https://github.com/samanthavf" target="_blank">
-            <i> <img src="github.png" alt="github"></i>
-        </a>
-        
-        <a href="https://www.linkedin.com/in/samanthavf-dev/" target="_blank">
-            <i><img src="linkedin.png" alt="linkedin"></i>
-        </a>
-    </nav>
+                <div class="back-skills">
+                    <h4>Back-End</h4>
+                    <ul class="back-techs">
+                        <li>Java</li>
+                        <li>Spring Boot</li>
+                        <li>Spring Security</li>
+                        <li>Spring JPA</li>
+                        <li>PostgreSQL</li>
+                        <li>Flyway</li>
+                        <li>JWT</li>
+                    </ul>
+                </div>
+                <div class="front-skills">
+                    <h4>Front-End</h4>
+                    <ul class="front-techs">
+                        <li>Angular</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>HTML5&CSS3</li>
+                        <li>Bootstrap</li>
+                        <li>WordPress</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
 
-    <nav class="nav-2">
-        <a href="mailto:samantha3490@gmail.com"><i>Email</i></a>
-    </nav>
-</footer>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        <h1 class="content-title">Projetos Anteriores</h1>
+        <ol class="instructions">
+            <li>Clique em um espaço vazia para mover o coelho.</li>
+            <li>Ao coletar uma cenoura, exibirá um projeto.</li>
+            <li>Colete todas as cenouras para completar o placar e vencer o
+                jogo!</li>
+        </ol>
+        <canvas #gameCanvas></canvas>
+
+        <div *ngIf="modalAberto" class="modal">
+            <div class="modal-content">
+                <span class="close" (click)="fecharModal()">&times;</span>
+                <h2>{{ projetoAtual.titulo }}</h2>
+                <p>{{ projetoAtual.descricao }}</p>
+                <img [src]="projetoAtual.imagem"
+                    alt="{{ projetoAtual.titulo }}" />
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <nav>
+            <a href="https://github.com/samanthavf" target="_blank">
+                <i> <img src="github.png" alt="github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/samanthavf-dev/"
+                target="_blank">
+                <i><img src="linkedin.png" alt="linkedin"></i>
+            </a>
+        </nav>
+
+        <nav class="nav-2">
+            <a href="mailto:samantha3490@gmail.com"><i>Email</i></a>
+        </nav>
+    </footer>
 
 </div>

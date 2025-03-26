@@ -1,31 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-.main-container{
+
+.main-container {
     position: relative;
     top: 30px;
     margin: 0 auto;
     width: 87%;
     border: 2px solid #0074a2;
-    box-shadow: 0px 0px 20px 5px #0074a2; 
+    box-shadow: 0px 0px 20px 5px #0074a2;
     border-radius: 10px;
     padding: clamp(.5rem, 3vw, 2rem);
     height: 310vh;
     overflow: hidden;
 }
 
-.header-main{
+.header-main {
     position: relative;
     top: -40px;
     left: -40px;
     width: 120%;
     height: 1020px;
     background-color: rgba(17, 17, 17, 0.7);
-    border-bottom: 1px dashed  #0074a2; 
-    box-shadow: 0px 0px 8px 2px #0074a2; 
-    overflow: hidden; 
-    z-index: 10; 
-}  
+    border-bottom: 1px dashed #0074a2;
+    box-shadow: 0px 0px 8px 2px #0074a2;
+    overflow: hidden;
+    z-index: 10;
+}
 
-.content{
+.content {
     position: relative;
     top: -40px;
     left: -40px;
@@ -34,11 +35,11 @@
     background-color: rgba(17, 17, 17, 0.7);
     border-bottom: 1px dashed #0074a2;
     box-shadow: 0px 0px 8px 2px #0074a2;
-    overflow: hidden; 
+    overflow: hidden;
     z-index: 9;
 }
 
-.content-title{
+.content-title {
     position: absolute;
     top: 35px;
     left: 25%;
@@ -48,20 +49,20 @@
     position: absolute;
     top: 21%;
     left: 6%;
-    display: block; 
+    display: block;
 }
 
-.instructions{
+.instructions {
     position: absolute;
     left: 15%;
-    text-align: left; 
-    flex-direction: column; 
+    text-align: left;
+    flex-direction: column;
     line-height: 1.8;
     font-size: 16px;
     top: 10%;
 }
 
-footer{
+footer {
     position: relative;
     top: -62px;
     left: -40px;
@@ -70,16 +71,16 @@ footer{
     background-color: rgba(17, 17, 17, 0.7);
     overflow: hidden;
     z-index: 8;
-     display: flex;
+    display: flex;
     justify-content: space-between;
     padding: 10px 30px;
 }
 
-#division{
+#division {
     position: absolute;
     top: 170px;
     background-color: #0074a2;
-    box-shadow: 0px 0px 8px 2px #0074a2; 
+    box-shadow: 0px 0px 8px 2px #0074a2;
     width: 120%;
     height: 2px;
 }
@@ -94,16 +95,16 @@ footer{
 
 }
 
-.marquee-content{
+.marquee-content {
     display: inline-block;
     color: #ffcc00;
     font-size: 45px;
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 
-    3px 3px #ff0000,  
-    2px 2px #ff6600,  
-    1px 1px #cc9900;
+    text-shadow:
+        3px 3px #ff0000,
+        2px 2px #ff6600,
+        1px 1px #cc9900;
     animation: marquee 15s linear infinite;
 }
 
@@ -111,77 +112,81 @@ footer{
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-50%);
     }
 }
 
-#me{
+#me {
     position: absolute;
     width: 450px;
     top: 30%;
     right: 73%;
 }
 
-.presentation-txt{
+.presentation-txt {
     position: absolute;
     font-size: 15px;
     top: 19%;
     left: 33%;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     max-width: 810px;
     text-align: left;
 }
+
 p {
     margin: 15px 0;
     line-height: 1.4;
 }
 
-.skills{
+.skills {
     position: absolute;
     top: 52%;
     left: 33%;
     border-radius: 8px;
     border: 1px dashed #e82ea1;
-    box-shadow: 0px 0px 8px 5px #f6a6e7; 
+    box-shadow: 0px 0px 8px 5px #f6a6e7;
     height: 53vh;
     width: 50%;
 }
 
-.habilidades{
+.habilidades {
     position: absolute;
     width: 100%;
     height: 7vh;
-    box-shadow: 0px 0px 3px 3px #f6a6e7; 
+    box-shadow: 0px 0px 3px 3px #f6a6e7;
 
 }
 
-.back-skills, .front-skills{
+.back-skills,
+.front-skills {
     position: absolute;
     top: 57px;
     height: 7vh;
     width: 50%;
-    box-shadow:  -1px 0px 3px rgba(246, 166, 231, 0.6), 1px 0px 3px rgba(246, 166, 231, 0.6); 
-    transition: transform 0.3s ease-in-out; 
+    box-shadow: -1px 0px 3px rgba(246, 166, 231, 0.6), 1px 0px 3px rgba(246, 166, 231, 0.6);
+    transition: transform 0.3s ease-in-out;
 }
 
 
-.back-techs, .front-techs {
+.back-techs,
+.front-techs {
     line-height: 1.4;
-    text-align: left; 
+    text-align: left;
     padding: 20px;
 }
 
 .back-skills {
-    left: 0; 
+    left: 0;
 }
 
-.front-skills{
+.front-skills {
     left: 50%;
 }
 
-  nav {
+nav {
     display: flex;
     align-items: center;
 }
@@ -211,8 +216,10 @@ nav a img {
     transition: transform 0.3s ease-in-out;
 }
 
-.back-skills:hover, .front-skills:hover, nav a:hover img {
-    transform: scale(1.09); 
+.back-skills:hover,
+.front-skills:hover,
+nav a:hover img {
+    transform: scale(1.09);
     transition: transform 0.3s ease;
 }
 
@@ -220,7 +227,7 @@ footer nav {
     justify-content: flex-end;
 }
 
-.heart{
+.heart {
     width: 60px;
 }
 
@@ -235,22 +242,20 @@ footer nav {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background: white;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     width: 50%;
-  }
-  
-  .close {
+}
+
+.close {
     position: absolute;
     top: 15px;
     right: 20px;
     font-size: 30px;
     cursor: pointer;
-  }
-  
-  
+}
