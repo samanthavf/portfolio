@@ -20,11 +20,16 @@ export class PortifolioComponent implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   modalAberto = false;
-  projetoAtual = { titulo: '', descricao: '', imagem: '' };
+  projetoAtual = { titulo: '', imagem: '' , descricao: '',link: '' };
 
   projetos = [
-    { titulo: 'Projeto 1', descricao: 'Descrição do projeto 1', imagem: 'projeto1.png' },
-    { titulo: 'Projeto 2', descricao: 'Descrição do projeto 2', imagem: 'projeto2.png' }
+    { titulo: 'Ciphernest', imagem: 'cipher-1.png', descricao: 'Descrição do projeto 1',link: 'https://ciphernest.netlify.app/encoder' },
+    { titulo: 'Cardápio', imagem: 'projeto1.png', descricao: 'Descrição do projeto 2', link: ''  },
+    { titulo: 'Space Chat', imagem: 'projeto1.png', descricao: 'Descrição do projeto 3', link: ''  },
+    { titulo: 'meme-maker', imagem: 'mm-1.png', descricao: 'Descrição do projeto 4', link: 'https://samanthavf.github.io/meme-maker/'  },
+    { titulo: 'Medieval Philosophy', imagem: 'fm-1.png', descricao: 'Descrição do projeto 5', link: 'https://samanthavf.github.io/Medieval-Philosophy/'  },
+    { titulo: 'spreadssheets', imagem: 'sheet-1.png', descricao: 'Descrição do projeto 6', link: 'https://spreadssheets.netlify.app/spreadsheet'  },
+    { titulo: 'borboletacilhuda', imagem: 'bbc-1.png', descricao: 'Descrição do projeto 7', link: 'https://borboletacilhuda.com/'  }
   ];
 
   abrirModal(projetoIndex: number) {
@@ -37,7 +42,7 @@ export class PortifolioComponent implements AfterViewInit {
   }
 
   private walls = [
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3],
+    [0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10, 10, 10, 10, 10, 0],
     [1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
     [1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2, 1, 0, 1, 0, 1],
@@ -62,7 +67,7 @@ export class PortifolioComponent implements AfterViewInit {
     let count = 0;
     for (let row = 0; row < this.walls.length; row++) {
       for (let col = 0; col < this.walls[row].length; col++) {
-        if (this.walls[row][col] === 3 && count < this.score) {
+        if (this.walls[row][col] === 10 && count < this.score) {
           this.walls[row][col] = 4;
           count++;
           this.score--;
@@ -81,6 +86,7 @@ export class PortifolioComponent implements AfterViewInit {
 
       this.canvas.width = container.offsetWidth;
       this.canvas.height = container.offsetHeight;
+      
 
       this.character.img = new Image();
       this.character.img.src = 'char.gif';
@@ -122,12 +128,14 @@ export class PortifolioComponent implements AfterViewInit {
       this.character.y = cellY;
       this.draw();
       this.checkCollision(this.character.x * cellSize, this.character.y * cellSize);
-    } else if (this.walls[cellY] && this.walls[cellY][cellX] === 2) {
+    } else if (this.walls[cellY] && this.walls[cellY][cellX] === 2 ) {
       console.log('Visualizou um projeto!');
       this.walls[cellY][cellX] = 0
 
-      const projetoIndex = Math.floor(Math.random() * this.projetos.length);
+
+      const projetoIndex = this.getUniqueProjectIndex();
       this.abrirModal(projetoIndex);
+
 
       this.score++;
       this.updateScore();
@@ -135,6 +143,23 @@ export class PortifolioComponent implements AfterViewInit {
       this.draw()
     }
   }
+
+projetosExibidos: Set<number> = new Set();
+
+getUniqueProjectIndex(){
+  let projetoIndex;
+
+  do {
+    projetoIndex = Math.floor(Math.random() * this.projetos.length)
+  } while (this.projetosExibidos.has(projetoIndex));
+
+  this.projetosExibidos.add(projetoIndex);
+
+if (this.projetosExibidos.size === this.projetos.length) {
+  this.projetosExibidos.clear();
+}
+return projetoIndex;
+}
 
   drawCharacter() {
     if (this.character.img && this.character.img.complete) {
@@ -151,12 +176,17 @@ export class PortifolioComponent implements AfterViewInit {
 
   drawWalls() {
     const cellSize = 80;
-
+   
     for (let row = 0; row < this.walls.length; row++) {
       for (let col = 0; col < this.walls[row].length; col++) {
-        if (this.walls[row][col] === 1) {
-          this.ctx.fillStyle = 'white';
-          this.ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
+        if (this.walls[row][col] === 1)  {
+          this.ctx.fillStyle='white';
+          this.ctx.fillRect(
+            col*cellSize,
+            row*cellSize,
+            cellSize,
+            cellSize
+          );
         } else if (this.walls[row][col] === 2 && this.carrot.img) {
           this.ctx.drawImage(
             this.carrot.img,
@@ -165,7 +195,7 @@ export class PortifolioComponent implements AfterViewInit {
             cellSize / 2,
             cellSize / 2
           );
-        } else if (this.walls[row][col] === 3) {
+        } else if (this.walls[row][col] === 10) {
           this.ctx.fillStyle = 'rgba(17, 17, 17, 0.7)';
           this.ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
         } else if (this.walls[row][col] === 4 && this.carrot.img) {

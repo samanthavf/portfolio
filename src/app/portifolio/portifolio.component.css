@@ -47,8 +47,8 @@
 
 .content canvas {
     position: absolute;
-    top: 21%;
-    left: 6%;
+    top: 17%;
+    left: 5.5%;
     display: block;
 }
 
@@ -246,16 +246,38 @@ footer nav {
 
 .modal-content {
     background: white;
+    color: black;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    width: 50%;
+    width: 80%;
+    height: 80vh;
 }
 
 .close {
     position: absolute;
-    top: 15px;
-    right: 20px;
+    color: white;
+    top: 55px;
+    right: 65px;
     font-size: 30px;
     cursor: pointer;
+}
+
+.project-image{
+    position: absolute;
+    width: 550px;
+    height: 400px;
+    left: 50%;
+}
+
+.site-link{
+    position: absolute;
+    top: 75%;
+    color: black;
+    right: 29%;
+}
+
+.project-description{
+    position: absolute;
+
 }

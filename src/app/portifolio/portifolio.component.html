@@ -42,12 +42,15 @@
                     <h4>Back-End</h4>
                     <ul class="back-techs">
                         <li>Java</li>
+                        <li>Junit & Mockito</li>
+                        <li>Flyway</li>
+                        <li>PostgreSQL</li>
                         <li>Spring Boot</li>
+                        <li>Spring MVC</li>
                         <li>Spring Security</li>
                         <li>Spring JPA</li>
-                        <li>PostgreSQL</li>
-                        <li>Flyway</li>
-                        <li>JWT</li>
+                        <li>Spring Boot Actuator</li>
+
                     </ul>
                 </div>
                 <div class="front-skills">
@@ -56,7 +59,7 @@
                         <li>Angular</li>
                         <li>JavaScript</li>
                         <li>TypeScript</li>
-                        <li>HTML5&CSS3</li>
+                        <li>HTML5 & CSS3</li>
                         <li>Bootstrap</li>
                         <li>WordPress</li>
                         <li>Figma</li>
@@ -81,9 +84,10 @@
             <div class="modal-content">
                 <span class="close" (click)="fecharModal()">&times;</span>
                 <h2>{{ projetoAtual.titulo }}</h2>
-                <p>{{ projetoAtual.descricao }}</p>
-                <img [src]="projetoAtual.imagem"
+                <p class="project-description">{{ projetoAtual.descricao }}</p>
+                <img class="project-image" [src]="projetoAtual.imagem"
                     alt="{{ projetoAtual.titulo }}" />
+                <a [href]="projetoAtual.link" class="site-link" target="_blank">Visitar Site</a>
             </div>
         </div>
 
