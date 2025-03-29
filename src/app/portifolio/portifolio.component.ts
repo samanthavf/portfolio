@@ -20,16 +20,16 @@ export class PortifolioComponent implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   modalAberto = false;
-  projetoAtual = { titulo: '', imagem: '' , descricao: '',link: '' };
+  projetoAtual = { titulo: '', imagem:[] as string[], descricao: '',link: '' };
 
   projetos = [
-    { titulo: 'Ciphernest', imagem: 'cipher-1.png', descricao: 'Descrição do projeto 1',link: 'https://ciphernest.netlify.app/encoder' },
-    { titulo: 'Cardápio', imagem: 'projeto1.png', descricao: 'Descrição do projeto 2', link: ''  },
-    { titulo: 'Space Chat', imagem: 'projeto1.png', descricao: 'Descrição do projeto 3', link: ''  },
-    { titulo: 'meme-maker', imagem: 'mm-1.png', descricao: 'Descrição do projeto 4', link: 'https://samanthavf.github.io/meme-maker/'  },
-    { titulo: 'Medieval Philosophy', imagem: 'fm-1.png', descricao: 'Descrição do projeto 5', link: 'https://samanthavf.github.io/Medieval-Philosophy/'  },
-    { titulo: 'spreadssheets', imagem: 'sheet-1.png', descricao: 'Descrição do projeto 6', link: 'https://spreadssheets.netlify.app/spreadsheet'  },
-    { titulo: 'borboletacilhuda', imagem: 'bbc-1.png', descricao: 'Descrição do projeto 7', link: 'https://borboletacilhuda.com/'  }
+    { titulo: 'Ciphernest', imagem: ['cipher-1.png'], descricao: 'Um codificador e decodificador de mensagens que suporta diferentes formatos, como Base64, binário e código Morse. Desenvolvido para facilitar a comunicação segura, o Ciphernest é uma ferramenta versátil para entusiastas da criptografia.',link: 'https://ciphernest.netlify.app/encoder' },
+    { titulo: 'Cardápio', imagem: ['projeto1.png'], descricao: 'Um sistema interativo para a criação e visualização de cardápios digitais. Ideal para restaurantes e cafés que desejam modernizar suas operações, permitindo que clientes visualizem opções de pratos e bebidas de forma prática.', link: ''  },
+    { titulo: 'Space Chat', imagem: ['projeto1.png'], descricao: 'Uma plataforma de chat em tempo real, projetada para conectar pessoas de diferentes lugares em um ambiente dinâmico e intuitivo. Inspirado na comunicação interplanetária, o Space Chat facilita conversas rápidas e eficientes.', link: ''  },
+    { titulo: 'meme-maker', imagem: ['mm-1.png'], descricao: 'Uma ferramenta divertida que permite criar memes personalizados de forma rápida e intuitiva. É ideal para quem deseja compartilhar sua criatividade e senso de humor na internet.', link: 'https://samanthavf.github.io/meme-maker/'  },
+    { titulo: 'Medieval Philosophy', imagem: ['fm-1.png'], descricao: 'Um projeto dedicado à filosofia medieval, reunindo informações sobre pensadores, teorias e debates da época. Uma excelente fonte para estudantes e entusiastas do tema.', link: 'https://samanthavf.github.io/Medieval-Philosophy/'  },
+    { titulo: 'spreadssheets', imagem: ['sheet-1.png'], descricao: 'Uma plataforma de planilhas online que facilita a criação e organização de dados. Com uma interface intuitiva, é uma excelente alternativa para quem busca uma solução leve e eficiente para gerenciamento de informações.', link: 'https://spreadssheets.netlify.app/spreadsheet'  },
+    { titulo: 'borboletacilhuda', imagem: ['bbc-1.png'], descricao: 'Um projeto criativo que combina design, arte e inovação. Com um nome marcante e uma abordagem única, ele oferece experiências visuais e interativas para seu público.', link: 'https://borboletacilhuda.com/'  }
   ];
 
   abrirModal(projetoIndex: number) {
