@@ -245,12 +245,12 @@ footer nav {
 }
 
 .modal-content {
-    background: white;
+    background: rgba(239, 239, 239, 0.7);
     color: black;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    width: 78%;
+    width: 75%;
     height: 90vh;
 }
 
@@ -280,8 +280,8 @@ footer nav {
 
 .project-description{
     position: absolute;
-    top: 25%;
-    left: 15%;
+    top: 22%;
+    left: 18%;
     width: 300px;
     line-height: 1.6;
     margin: 15px 0;
