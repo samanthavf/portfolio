@@ -9,7 +9,7 @@
     box-shadow: 0px 0px 20px 5px #0074a2;
     border-radius: 10px;
     padding: clamp(.5rem, 3vw, 2rem);
-    height: 350vh;
+    height: 345vh;
     overflow: hidden;
 }
 
