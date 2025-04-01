@@ -1,7 +1,7 @@
 body{
     background-color:  #0f052d;
     color: white;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P';
     text-align: center;
 }
 
@@ -11,7 +11,6 @@ body{
     box-sizing: border-box;
 }
 
-/* Criando o fundo de estrelas */
 .stars {
     width: 100%;
     height: 100%;
@@ -21,12 +20,11 @@ body{
     background: 
       radial-gradient(white 1px, transparent 2px),
       radial-gradient(white 1px, transparent 2px);
-    background-size: 800px 800px; /* Define o tamanho das estrelas */
+    background-size: 800px 800px; 
     background-position: 0 0, 400px 400px;
     animation: moveStars 10s linear infinite;
   }
   
-  /* Animação para movimentar as estrelas */
   @keyframes moveStars {
     from {
       background-position: 0 0, 400px 400px;
