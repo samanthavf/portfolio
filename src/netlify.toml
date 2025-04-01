@@ -1,0 +1,5 @@
+[build]
+  command = "NODE_ENV=production npm run build"
+
+[angular]
+  inlineCriticalCss = false
