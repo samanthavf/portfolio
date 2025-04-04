@@ -6,11 +6,15 @@
 
         <div class="marquee-container">
             <div class="marquee-content">
-                <img src="/assets/images/heart.png" alt="heart" class="heart"> Bem-vindo ao meu
-                site! <img src="/assets/images/heart.png" alt="heart" class="heart"> |
+                <img src="/assets/images/heart.png" alt="heart" class="heart">
+                Bem-vindo ao meu
+                site! <img src="/assets/images/heart.png" alt="heart"
+                    class="heart"> |
                 Desenvolvedora Fullstack | Criando experiências incríveis! |
-                <img src="/assets/images/heart.png" alt="heart" class="heart"> Bem-vindo ao meu
-                site! <img src="/assets/images/heart.png" alt="heart" class="heart"> |
+                <img src="/assets/images/heart.png" alt="heart" class="heart">
+                Bem-vindo ao meu
+                site! <img src="/assets/images/heart.png" alt="heart"
+                    class="heart"> |
                 Desenvolvedora Fullstack | Criando experiências incríveis! |
             </div>
         </div>
@@ -27,8 +31,7 @@
                 Tenho experiência com WordPress, criando e personalizando temas
                 e plugins, além de trabalhar
                 com PostgreSQL e MySQL para gerenciamento de dados. Utilizo
-                também Docker para facilitar a implantação e escalabilidade,
-                e Git para controle de versão e colaboração em equipe. Quando
+                Git para controle de versão e colaboração em equipe. Quando
                 não estou codificando, gosto de ler, explorar o mundo das artes
                 e,
                 claro, saborear um bom café. Vamos tirar projetos do papel e
@@ -36,33 +39,26 @@
         </div>
         <div class="skills">
             <div class="skills-container">
-                <div class="habilidades"><h3>Habilidades</h3></div>
 
+                <div class="habilidades"><h3>Habilidades</h3></div>
                 <div class="back-skills">
                     <h4>Back-End</h4>
                     <ul class="back-techs">
-                        <li>Java</li>
-                        <li>Junit & Mockito</li>
-                        <li>Flyway</li>
-                        <li>PostgreSQL</li>
-                        <li>Spring Boot</li>
-                        <li>Spring MVC</li>
-                        <li>Spring Security</li>
-                        <li>Spring JPA</li>
-                        <li>Spring Boot Actuator</li>
-
+                        <li><img src="/assets/images/java.png" alt="java-icon">  Java</li>
+                        <li><img src="/assets/images/spring.png" alt="spring-icon"> Spring FrameWork</li>
+                        <li><img src="/assets/images/postgresql.png" alt="post-icon"> PostgreSQL</li>
+                        <li><img src="/assets/images/mysql.png" alt="mysql-icon"> MySQL</li>
+                        <li><img src="/assets/images/javascript.png" alt="js-icon"> JavaScript</li>
+                        <li><img src="/assets/images/nodejs.png" alt="node-icon"> Node.Js</li>
                     </ul>
                 </div>
                 <div class="front-skills">
                     <h4>Front-End</h4>
                     <ul class="front-techs">
-                        <li>Angular</li>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>HTML5 & CSS3</li>
-                        <li>Bootstrap</li>
-                        <li>WordPress</li>
-                        <li>Figma</li>
+                        <li><img src="/assets/images/angular.png" alt="angular-icon"> Angular</li>
+                        <li><img src="/assets/images/typescript.png" alt="type-icon"> TypeScript</li>
+                        <li><img src="/assets/images/html.png" alt="htnl-icon"> HTML5 & <i><img src="/assets/images/css.png" alt="css-icon"></i> CSS3</li>
+                        <li><img src="/assets/images/bootstrap.png" alt="boots-icon"> Bootstrap</li>
                     </ul>
                 </div>
 
@@ -84,9 +80,12 @@
                 <span class="close" (click)="fecharModal()">&times;</span>
                 <h2>{{ projetoAtual.titulo }}</h2>
                 <p class="project-description">{{ projetoAtual.descricao }}</p>
-                <img class="/assets/images/project-image" [src]="projetoAtual.imagem"
+                <video *ngIf="projetoAtual.video" class="project-video"
+                    [src]="projetoAtual.video" controls autoplay></video>
+                <img class="project-image" [src]="projetoAtual.imagem"
                     alt="{{ projetoAtual.titulo }}" />
-                <a [href]="projetoAtual.link" class="site-link" target="_blank">Visitar Site</a>
+                <a [href]="projetoAtual.link" class="site-link"
+                    target="_blank">Visitar Site</a>
             </div>
         </div>
 
