@@ -1,27 +1,61 @@
-# Portifolio
+# 🎮 Samantha | Portfólio Pessoal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+👾 Bem-vindo(a) ao meu **portfólio pessoal**, uma jornada digital com a estética de **jogos clássicos em pixel art**! Aqui você pode explorar meus projetos, habilidades, experiências e desafios concluídos — tudo com a vibe retrô dos games que marcaram época.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🧑‍💻 Sobre mim
 
-## Code scaffolding
+Sou a **Samantha**, desenvolvedora apaixonada por tecnologia, com foco em criar soluções modernas com um toque nostálgico. Curto unir criatividade, design e código — especialmente com inspirações no universo dos games retrô. 👾
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🚀 Tecnologias Principais
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- 🌐 **Frontend**
+  - Angular
+  - HTML / CSS (com um charme retrô!)
+  - TypeScript
 
-## Running unit tests
+- ⚙️ **Backend**
+  - Java com Spring Framework (Spring Boot, Spring Security, Spring Data JPA)
+  - APIs RESTful
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- 🗃️ **Banco de Dados**
+  - PostgreSQL
+  - MySQL
 
-## Running end-to-end tests
+- 🧪 **Outros Conhecimentos**
+  - JWT para autenticação
+  - Git e GitHub
+  - Docker (em aprendizado)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 🎯 O que você vai encontrar
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+✨ No meu portfólio você pode:
+- Visualizar projetos pessoais com front e backend integrados
+- Ver aplicações completas com autenticação, banco de dados e layout customizado
+- Conhecer um pouco da minha trajetória na área de desenvolvimento
+
+---
+
+## 🎨 Estética
+
+Este portfólio foi criado com uma interface inspirada em **jogos 8-bit**, onde a pixel art e as cores nostálgicas trazem uma experiência divertida, única e original para quem navega.
+
+---
+
+## 🔗 Acesse
+
+Você pode visitar o portfólio clicando aqui:  
+👉 **[www.samantha.dev](https://samanthafreitas.netlify.app/portifolio)** 
+
+---
+
+## 🤝 Conecte-se comigo
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/samanthavf-dev/)
+- 📧 samanthavfl3490@gmail.com
+  
