@@ -268,17 +268,15 @@ footer nav {
 
 .project-video {
     position: absolute;
-    top: 18%;
-    width: 450px;
-    height: 500px;
+    top: 20%;
     left: 45%;
 }
 
 .site-link {
     position: absolute;
-    top: 85%;
+    top: 70%;
     color: black;
-    right: 29%;
+    right: 32%;
 }
 
 .project-description {

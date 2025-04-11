@@ -81,7 +81,9 @@
                 <h2>{{ projetoAtual.titulo }}</h2>
                 <p class="project-description">{{ projetoAtual.descricao }}</p>
                 <video *ngIf="projetoAtual.video" class="project-video"
-                    [src]="projetoAtual.video" controls autoplay></video>
+                    [src]="projetoAtual.video" controls autoplay 
+                    width="600"
+                    height="340"></video>
                 <a [href]="projetoAtual.link" class="site-link"
                     target="_blank">Visitar</a>
             </div>
