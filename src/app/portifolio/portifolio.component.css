@@ -266,10 +266,10 @@ footer nav {
     cursor: pointer;
 }
 
-.project-image {
+.project-video {
     position: absolute;
-    top: 20%;
-    width: 650px;
+    top: 18%;
+    width: 450px;
     height: 500px;
     left: 45%;
 }

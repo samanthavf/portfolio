@@ -82,10 +82,8 @@
                 <p class="project-description">{{ projetoAtual.descricao }}</p>
                 <video *ngIf="projetoAtual.video" class="project-video"
                     [src]="projetoAtual.video" controls autoplay></video>
-                <img class="project-image" [src]="projetoAtual.imagem"
-                    alt="{{ projetoAtual.titulo }}" />
                 <a [href]="projetoAtual.link" class="site-link"
-                    target="_blank">Visitar Site</a>
+                    target="_blank">Visitar</a>
             </div>
         </div>
 
@@ -97,7 +95,7 @@
                 <i> <img src="/assets/images/github.png" alt="github"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/samanthavf-dev/"
+            <a href="https://www.linkedin.com/in/samanthavf-dev"
                 target="_blank">
                 <i><img src="/assets/images/linkedin.png" alt="linkedin"></i>
             </a>
