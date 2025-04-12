@@ -61,6 +61,7 @@ export class PortifolioComponent implements AfterViewInit {
 
   private character = { img: null as HTMLImageElement | null, x: 1, y: 0 };
   private carrot = { img: null as HTMLImageElement | null }
+  private trophy = { img:null as HTMLImageElement | null}
   private score = 0;
 
   updateScore() {
@@ -102,6 +103,13 @@ export class PortifolioComponent implements AfterViewInit {
         this.draw();
       }
 
+      this.trophy.img = new Image();
+      this.trophy.img.src = '/assets/images/trophy.png'
+      this.trophy.img.onload = () => {
+        console.log('Card Imagem carregada!');
+        this.draw();
+      }
+
       this.canvas.addEventListener('click', (event) => this.handleMouseMove(event));
     }
   }
@@ -129,7 +137,6 @@ export class PortifolioComponent implements AfterViewInit {
       if (this.walls[cellY][cellX] === 2) {
         this.checkCollision(this.character.x * cellSize, this.character.y * cellSize);
         console.log('Visualizou um projeto!');
-        this.walls[cellY][cellX] = 0
 
         const projetoIndex = this.getUniqueProjectIndex();
         this.abrirModal(projetoIndex);
@@ -198,9 +205,9 @@ export class PortifolioComponent implements AfterViewInit {
         } else if (this.walls[row][col] === 10) {
           this.ctx.fillStyle = 'rgba(17, 17, 17, 0.7)';
           this.ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
-        } else if (this.walls[row][col] === 4 && this.carrot.img) {
+        } else if (this.walls[row][col] === 4 && this.trophy.img) {
           this.ctx.drawImage(
-            this.carrot.img,
+            this.trophy.img,
             col * cellSize + (cellSize / 4),
             row * cellSize + (cellSize / 4),
             cellSize / 2,
@@ -217,7 +224,6 @@ export class PortifolioComponent implements AfterViewInit {
 
     if (this.walls[row][col] === 2) {
       console.log('Visualizou projeto!')
-      this.walls[row][col] = 0;
 
       const projetoIndex = Math.floor(Math.random() * this.projetos.length);
       this.abrirModal(projetoIndex);
